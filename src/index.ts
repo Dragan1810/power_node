@@ -1,3 +1,3 @@
 const fun = (apple: number): number => apple + 1;
 
-fun(5);
+console.log(fun(8));

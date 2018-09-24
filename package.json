@@ -7,7 +7,9 @@
   "author": "Dragan <d.novakovic1810@yahoo.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack"
+    "dev": "concurrently 'npm:watch-*'",
+    "watch-ts": "webpack",
+    "watch-files": "nodemon build/bundle"
   },
   "dependencies": {
     "webpack": "^4.19.1"
@@ -17,6 +19,9 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-typescript": "^7.1.0",
     "babel-loader": "^8.0.2",
-    "webpack-cli": "^3.1.1"
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
   }
 }

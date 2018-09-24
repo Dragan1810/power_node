@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (1:18)\\nYou may need an appropriate loader to handle this file type.\\n> const fun = (apple: number): number => apple + 1;\\r\\n| \\r\\n| fun(5);\\r\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3NyYy9pbmRleC50cy5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.ts\n");
+eval("var fun = function fun(apple) {\n  return apple + 1;\n};\n\nconsole.log(fun(8));\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 

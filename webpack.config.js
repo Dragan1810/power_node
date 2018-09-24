@@ -3,8 +3,8 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.ts",
   target: "node",
+  watch: true,
   mode: "development",
-  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -13,9 +13,9 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|mjs|ts)$/,
         use: "babel-loader",
-        exclude: /(node_modules)/,
-        test: /\.js$/
+        exclude: /(node_modules)/
       }
     ]
   }
