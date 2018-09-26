@@ -1,3 +1,10 @@
-const fun = (apple: number): number => apple + 1;
+import express, { Application } from "express";
 
-console.log(fun(8));
+import Routes from "./routes";
+
+const app: Application = express();
+
+app.use("/", Routes);
+
+const PORT = 3000;
+app.listen(PORT, () => console.log("Server Runing !!!!"));
