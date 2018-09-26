@@ -1416,7 +1416,19 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './routes'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use(\"/\", !(function webpackMissingModule() { var e = new Error(\"Cannot find module './routes'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nvar PORT = 3000;\napp.listen(PORT, function () {\n  return console.log(\"Server Runing !!!!\");\n});\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes */ \"./src/routes.ts\");\n\n\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use(\"/\", _routes__WEBPACK_IMPORTED_MODULE_1__[\"Routes\"]);\nconst PORT = 3000;\napp.listen(PORT, () => console.log(\"Server Runing !!!!\"));\n\n//# sourceURL=webpack:///./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/routes.ts":
+/*!***********************!*\
+  !*** ./src/routes.ts ***!
+  \***********************/
+/*! exports provided: Routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Routes\", function() { return router; });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nconst router = Object(express__WEBPACK_IMPORTED_MODULE_0__[\"Router\"])();\nrouter.get(\"/\", (req, res) => {\n  res.json({\n    hello: \"world\"\n  });\n});\n\n\n//# sourceURL=webpack:///./src/routes.ts?");
 
 /***/ }),
 
