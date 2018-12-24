@@ -1,5 +1,4 @@
 import express, { Application } from "express";
-
 import { Routes } from "./routes";
 
 const app: Application = express();

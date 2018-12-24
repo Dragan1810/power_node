@@ -1,7 +1,7 @@
 {
   "name": "power_node",
-  "version": "0.0.1",
-  "description": "Back-end For Market",
+  "version": "0.1.0",
+  "description": "Plug and Play Back-end",
   "main": "src/index.js",
   "repository": "https://github.com/Dragan1810/power_node.git",
   "author": "Dragan <d.novakovic1810@yahoo.com>",
