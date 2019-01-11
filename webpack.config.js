@@ -3,6 +3,10 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.ts",
   target: "node",
+  node: {
+    __filename: true,
+    __dirname: true
+  },
   watch: true,
   mode: "development",
   output: {
