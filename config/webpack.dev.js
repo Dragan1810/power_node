@@ -1,6 +1,10 @@
+//@ts-check
 const path = require("path");
 
-module.exports = {
+/**
+ * @type import('webpack').Configuration
+ */
+const config = {
   entry: "./src/index.ts",
   target: "node",
   node: {
@@ -20,10 +24,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|mjs|ts)$/,
-        use: "babel-loader",
-        exclude: /(node_modules)/
+        test: /\.(m?js|ts)$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "swc-loader",
+          options: {
+            jsc: {
+              parser: {
+                syntax: "typescript"
+              }
+            }
+          }
+        }
       }
     ]
   }
 };
+
+module.exports = config;
