@@ -1,19 +1,18 @@
-version: '3'
+version: "3.5"
 services:
   app:
-    container_name: power_node
     restart: always
     build: .
     volumes:
       - ./src:/usr/src/app
     ports:
-      - '3000:3000'
-    links:
+      - "3000:3000"
+    depends_on:
       - mongo
+
   mongo:
-    container_name: mongo
     image: mongo
-  #  volumes:
-  #    - ./data:/data/db
+    #  volumes:
+    #    - ./data:/data/db
     ports:
-      - '27017:27017'
+      - "27017:27017"

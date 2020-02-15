@@ -14,7 +14,7 @@ const config = {
   watch: true,
   mode: "development",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "../build"),
     filename: "bundle.js",
     publicPath: "build/"
   },
@@ -29,9 +29,14 @@ const config = {
         use: {
           loader: "swc-loader",
           options: {
+            minify: true,
             jsc: {
+              target: "es2019",
+              loose: true,
               parser: {
-                syntax: "typescript"
+                syntax: "typescript",
+                decorators: true,
+                dynamicImport: true
               }
             }
           }
